@@ -6,15 +6,22 @@
     Retorne os elementos do array, separando-os por hífen (n1 - n2).
     */
 
-    //ENTRADA
-      let num1 = Number(prompt(`Informe um o primeiro número`));
-      let num2 = Number(prompt(`Informe um segundo número`));
-    //PROCESSAMENTO
-     let nums = [num1, num2];
-     if(num1 > num2) {
-        
-     }
+      // ENTRADA
+    let num1 = Number(prompt(`Informe o primeiro número:`));
+    let num2 = Number(prompt(`Informe o segundo número:`));
 
-    //SAÍDA
+    // PROCESSAMENTO
+    const nums = [];
 
-</script>    Faça o programa armazenar um número aleatório (entre 0 e 6).
+    if (num1 < num2) {
+        nums[0] = num1;
+        nums[1] = num2;
+    } else {
+        nums[0] = num2;
+        nums[1] = num1;
+    }
+
+    // SAÍDA
+    document.write(`${nums[0]} - ${nums[1]}`);
+
+</script>

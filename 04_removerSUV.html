@@ -9,11 +9,19 @@
     */
 
     //ENTRADA
-
-
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let tirar = prompt(`Qual carro quer remover da lista (${carrosSUV})`);
     //PROCESSAMENTO
+     let listaAntiga = carrosSUV.slice();
 
+    let index = carrosSUV.indexOf(tirar);
+
+    if (index !== -1) {
+        carrosSUV.splice(index, 1);
+    } else {
+        alert(`Carro não encontrado na lista.`);
+    }
 
     //SAÍDA
-
-</script>
+    document.write(`Lista antiga: ${listaAntiga.join(", ")}; Nova lista: ${carrosSUV.join(", ")}`);
+</script> 

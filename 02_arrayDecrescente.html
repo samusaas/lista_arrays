@@ -6,12 +6,30 @@
     Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
     */
 
-    //ENTRADA
+    // ENTRADA
+    let num1 = Number(prompt("Informe o primeiro número:"));
+    let num2 = Number(prompt("Informe o segundo número:"));
+    let num3 = Number(prompt("Informe o terceiro número:"));
 
+    // PROCESSAMENTO
+    const nums = [num1, num2, num3];
 
-    //PROCESSAMENTO
+    if (nums[0] < nums[1]) {
+        let resposta = nums[0];
+         nums[0] = nums[1];
+         nums[1] = resposta;
+    }
+    if (nums[1] < nums[2]) {
+        let resposta = nums[1];
+         nums[1] = nums[2];
+         nums[2] = resposta;
+    }
+      if (nums[0] < nums[1]) {
+        let resposta = nums[0];
+          nums[0] = nums[1];
+          nums[1] = resposta;
+    }
 
-
-    //SAÍDA
-
+    // SAÍDA
+    document.write(`${nums[0]} - ${nums[1]} - ${nums[2]}`);
 </script>
