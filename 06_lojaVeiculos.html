@@ -13,14 +13,52 @@
     */
 
     //ENTRADA
-    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
-    let carrosHatch = ["308", "Focus", "i30"];
-
+    const carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    const carrosHatch = ["308", "Focus", "i30"];
 
     //PROCESSAMENTO
+      let carro1 = prompt(`Informe o primeiro carro:`);
+    let tipo1 = prompt(`Informe o tipo do carro (SUV, Sedan ou Hatch):`).toLowerCase();
+    if (tipo1 === "suv") {
+        carrosSUV.push(carro1);
+    } else if (tipo1 === "sedan") {
+        carrosSedan.push(carro1);
+    } else if (tipo1 === "hatch") {
+        carrosHatch.push(carro1);
+    } else {
+        alert(`Tipo inválido! Carro não adicionado.`);
+    }
+
+    let carro2 = prompt(`Informe o segundo carro:`);
+    let tipo2 = prompt(`Informe o tipo do carro (SUV, Sedan ou Hatch):`).toLowerCase();
+    if (tipo2 === "suv") {
+        carrosSUV.push(carro2);
+    } else if (tipo2 === "sedan") {
+        carrosSedan.push(carro2);
+    } else if (tipo2 === "hatch") {
+        carrosHatch.push(carro2);
+    } else {
+        alert(`Tipo inválido! Carro não adicionado.`);
+    }
 
 
-    //SAÍDA
+    let carro3 = prompt(`Informe o terceiro carro:`);
+    let tipo3 = prompt(`Informe o tipo do carro (SUV, Sedan ou Hatch):`).toLowerCase();
+    if (tipo3 === "suv") {
+        carrosSUV.push(carro3);
+    } else if (tipo3 === "sedan") {
+        carrosSedan.push(carro3);
+    } else if (tipo3 === "hatch") {
+        carrosHatch.push(carro3);
+    } else {
+        alert(`Tipo inválido! Carro não adicionado.`);
+    }
 
-</script>
+    // SAÍDA
+    document.write(`Carros SUV: ${carrosSUV.join(`, `)}<br>`);
+
+    document.write(`Carros Sedan: ${carrosSedan.join(`, `)}<br>`);
+
+    document.write(`Carros Hatch: ${carrosHatch.join(`, `)}`);
+</script> 

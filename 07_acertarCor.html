@@ -13,14 +13,24 @@
     */
 
     //ENTRADA
-
+    
+    /* eu coloco as arrays em const porque eu vi uma video-aula falando que é o ideal, mas eu não tenho 100% de certeza se é útil */
+    const cores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    let escolheu = prompt("Informe uma cor (azul, amarelo, verde, branco, preto, marrom, cinza):");
 
     //PROCESSAMENTO
 
+    let randomNum = Math.floor(Math.random() * 7);
+    const corSorteada = cores[randomNum];
 
     //SAÍDA
-
-
+    if (escolheu.toLowerCase() === corSorteada) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${escolheu.toUpperCase()}!`);
+    } else {
+        alert("NÃO FOI DESSA VEZ... TENTE NOVAMENTE!");
+    }
+    
+    document.write(`Cor sorteada: ${corSorteada}`);
     /*
     Para gerar números aleatórios, há a função random, da biblioteca Math. Nesse caso, o comando deverá ser o Math.random().
     Contudo, o Math.random() irá gerar um número aleatório no intervalo entre 0 e 1, por exemplo, 0.678234283472.
